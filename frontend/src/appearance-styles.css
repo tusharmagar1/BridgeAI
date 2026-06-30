@@ -1,0 +1,262 @@
+/* ===== DESIGNER THEMES ===== */
+/* --- Premium Pastel Glow Variables --- */
+:root {
+  /* Pastel glow layers */
+  --logo-glow-layer-1: drop-shadow(0 0 16px rgba(255, 255, 255, 0.20));   /* Soft Pearl White */
+  --logo-glow-layer-2: drop-shadow(0 0 26px rgba(233, 213, 255, 0.18));   /* Pastel Lavender */
+  --logo-glow-layer-3: drop-shadow(0 0 35px rgba(219, 234, 254, 0.13));   /* Pastel Ice Blue */
+  /* Hover intensified glow */
+  --logo-glow-hover: drop-shadow(0 0 20px rgba(255, 255, 255, 0.24))
+                     drop-shadow(0 0 32px rgba(233, 213, 255, 0.22))
+                     drop-shadow(0 0 42px rgba(219, 234, 254, 0.17));
+}
+
+/* Override logo filter for dark themes */
+.dark {
+  --logo-filter: var(--logo-glow-layer-1) var(--logo-glow-layer-2) var(--logo-glow-layer-3);
+}
+/* Override for light themes */
+:not(.dark) {
+  --logo-filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
+}
+
+/* Interactive logo class */
+.logo-interactive {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.logo-interactive:hover {
+  transform: scale(1.04);
+  filter: var(--logo-glow-hover);
+}
+/* Slight brightness/contrast boost in dark mode */
+.dark .logo-interactive img {
+  filter: brightness(1.07) contrast(1.07);
+}
+
+
+/* 1. Cyber Neon (Dark) */
+.dark[data-preset="cyber-neon"],
+:root[data-preset="cyber-neon"] {
+  --color-surface-secondary: #05050c; /* Deep Obsidian */
+  --color-surface-primary: #0f0f18; /* Dark Graphite */
+  --color-surface-card: #0f0f18;
+  --color-surface-sidebar: #05050c;
+  --color-surface-navbar: #0f0f18;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #00f0ff; /* Electric Cyan */
+  --color-text-tertiary: #6b7280;
+  --color-bridge-50: rgba(255, 0, 127, 0.1);
+  --color-bridge-500: #ff007f; /* Electric Magenta */
+  --color-bridge-600: #d9006c;
+  --color-border-default: #1f1f2e;
+  --color-border-subtle: #141420;
+  --shadow-theme-glow: 0 0 25px rgba(255, 0, 127, 0.4);
+  --color-chart-1: #ff007f; --color-chart-2: #00f0ff; --color-chart-3: #f59e0b;
+  --bg-gradient-theme: linear-gradient(135deg, #05050c, #0f0f18, #ff007f);
+  --glass-blur-theme: 16px;
+  color-scheme: dark;
+
+  /* Active/Hover states */
+  --color-active-bg: rgba(0, 240, 255, 0.15); /* Cyan Glow */
+  --color-active-text: #00f0ff;
+  --color-active-border: #00f0ff;
+  --color-active-icon: #00f0ff;
+  --color-hover-bg: rgba(255, 0, 127, 0.1);
+  --color-focus-ring: rgba(0, 240, 255, 0.5);
+  --logo-filter: drop-shadow(0 0 8px rgba(255, 0, 127, 0.6));
+}
+
+/* 2. Autumn Forge (Light) */
+:root[data-preset="autumn-forge"] {
+  --color-surface-secondary: #fcfaf6; /* Soft Cream */
+  --color-surface-primary: #f5f0e6; /* Warm Ivory */
+  --color-surface-card: #ffffff;
+  --color-surface-sidebar: #fcfaf6;
+  --color-surface-navbar: #ffffff;
+  --color-text-primary: #451a03; /* Burnt Dark Brown */
+  --color-text-secondary: #b45309; /* Copper */
+  --color-bridge-50: #fef3c7;
+  --color-bridge-500: #d97706; /* Burnt Orange */
+  --color-bridge-600: #b45309;
+  --color-border-default: #d97706;
+  --color-border-subtle: #f5f0e6;
+  --shadow-theme-glow: 0 0 20px rgba(217, 119, 6, 0.15);
+  --color-chart-1: #d97706; --color-chart-2: #b45309; --color-chart-3: #f59e0b;
+  --bg-gradient-theme: linear-gradient(135deg, #fcfaf6, #f5f0e6, #d97706);
+  --glass-blur-theme: 20px;
+  color-scheme: light;
+
+  /* Active/Hover states */
+  --color-active-bg: rgba(180, 83, 9, 0.12);
+  --color-active-text: #b45309;
+  --color-active-border: #b45309;
+  --color-active-icon: #b45309;
+  --color-hover-bg: rgba(245, 158, 11, 0.08);
+  --color-focus-ring: rgba(180, 83, 9, 0.4);
+  --logo-filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15)) drop-shadow(0 4px 10px rgba(217, 119, 6, 0.2));
+}
+
+/* 3. Abyssal Trench (Dark) */
+.dark[data-preset="abyssal-trench"],
+:root[data-preset="abyssal-trench"] {
+  --color-surface-secondary: #060b14; /* Dark Ocean */
+  --color-surface-primary: #101726; /* Rich Charcoal */
+  --color-surface-card: #101726;
+  --color-surface-sidebar: #060b14;
+  --color-surface-navbar: #101726;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #14b8a6; /* Bright Teal */
+  --color-text-tertiary: #64748b;
+  --color-bridge-50: rgba(30, 58, 138, 0.2);
+  --color-bridge-500: #1e3a8a; /* Midnight Navy */
+  --color-bridge-600: #0d9488; /* Bioluminescent Teal */
+  --color-border-default: #1e293b;
+  --color-border-subtle: #0f172a;
+  --shadow-theme-glow: 0 0 25px rgba(20, 184, 166, 0.35);
+  --color-chart-1: #1e3a8a; --color-chart-2: #14b8a6; --color-chart-3: #0d9488;
+  --bg-gradient-theme: linear-gradient(135deg, #060b14, #101726, #1e3a8a);
+  --glass-blur-theme: 20px;
+  color-scheme: dark;
+
+  /* Active/Hover states */
+  --color-active-bg: rgba(20, 184, 166, 0.15);
+  --color-active-text: #14b8a6;
+  --color-active-border: #14b8a6;
+  --color-active-icon: #14b8a6;
+  --color-hover-bg: rgba(30, 58, 138, 0.15);
+  --color-focus-ring: rgba(20, 184, 166, 0.5);
+  --logo-filter: drop-shadow(0 0 8px rgba(20, 184, 166, 0.5));
+}
+
+/* 4. Zen Garden (Light) */
+:root[data-preset="zen-garden"] {
+  --color-surface-secondary: #f5f5f0; /* Pale Sand */
+  --color-surface-primary: #ffffff; /* Soft White */
+  --color-surface-card: #ffffff;
+  --color-surface-sidebar: #f5f5f0;
+  --color-surface-navbar: #ffffff;
+  --color-text-primary: #1c1917;
+  --color-text-secondary: #15803d; /* Bamboo Green */
+  --color-bridge-50: #f0fdf4;
+  --color-bridge-500: #16a34a;
+  --color-bridge-600: #15803d;
+  --color-border-default: #d6d3d1; /* Stone Gray */
+  --color-border-subtle: #f5f5f0;
+  --shadow-theme-glow: 0 0 20px rgba(22, 163, 74, 0.15);
+  --color-chart-1: #16a34a; --color-chart-2: #15803d; --color-chart-3: #78716c;
+  --bg-gradient-theme: linear-gradient(135deg, #f5f5f0, #ffffff, #16a34a);
+  --glass-blur-theme: 24px;
+  color-scheme: light;
+
+  /* Active/Hover states */
+  --color-active-bg: rgba(21, 128, 61, 0.12);
+  --color-active-text: #15803d;
+  --color-active-border: #15803d;
+  --color-active-icon: #15803d;
+  --color-hover-bg: rgba(120, 113, 108, 0.08);
+  --color-focus-ring: rgba(21, 128, 61, 0.4);
+  --logo-filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 10px rgba(22, 163, 74, 0.15));
+}
+
+/* 5. Royal Amethyst (Dark) */
+.dark[data-preset="royal-amethyst"],
+:root[data-preset="royal-amethyst"] {
+  --color-surface-secondary: #0c0514; /* Dark Plum */
+  --color-surface-primary: #180b28; /* Royal Purple */
+  --color-surface-card: #180b28;
+  --color-surface-sidebar: #0c0514;
+  --color-surface-navbar: #180b28;
+  --color-text-primary: #f5f3ff;
+  --color-text-secondary: #fbbf24; /* Gold */
+  --color-text-tertiary: #7c3aed;
+  --color-bridge-50: rgba(124, 58, 237, 0.2);
+  --color-bridge-500: #7c3aed; /* Deep Violet */
+  --color-bridge-600: #d97706; /* Gold accent */
+  --color-border-default: #2e1065;
+  --color-border-subtle: #120a1c;
+  --shadow-theme-glow: 0 0 25px rgba(251, 191, 36, 0.3);
+  --color-chart-1: #7c3aed; --color-chart-2: #fbbf24; --color-chart-3: #d97706;
+  --bg-gradient-theme: linear-gradient(135deg, #0c0514, #180b28, #7c3aed);
+  --glass-blur-theme: 20px;
+  color-scheme: dark;
+
+  /* Active/Hover states */
+  --color-active-bg: rgba(251, 191, 36, 0.15); /* Gold glow */
+  --color-active-text: #fbbf24;
+  --color-active-border: #fbbf24;
+  --color-active-icon: #fbbf24;
+  --color-hover-bg: rgba(124, 58, 237, 0.15);
+  --color-focus-ring: rgba(251, 191, 36, 0.5);
+  --logo-filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.5)) drop-shadow(0 0 4px rgba(251, 191, 36, 0.3));
+}
+
+/* Fallback: Arctic White */
+:root[data-preset="arctic-white"] {
+  --color-surface-secondary: #f8fafc;
+  --color-surface-primary: #ffffff;
+  --color-surface-card: #ffffff;
+  --color-surface-sidebar: #f8fafc;
+  --color-surface-navbar: #ffffff;
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #475569;
+  --color-bridge-50: #f1f5f9;
+  --color-bridge-500: #64748b;
+  --color-bridge-600: #f8fafc;
+  --color-border-default: #cbd5e1;
+  --color-border-subtle: #f8fafc;
+  --shadow-theme-glow: 0 0 20px rgba(100, 116, 139, 0.15);
+  --color-chart-1: #64748b; --color-chart-2: #475569; --color-chart-3: #cbd5e1;
+  --bg-gradient-theme: linear-gradient(135deg, #f8fafc, #cbd5e1, #64748b);
+  --glass-blur-theme: 20px;
+  color-scheme: light;
+
+  /* Active/Hover states */
+  --color-active-bg: rgba(71, 85, 105, 0.12);
+  --color-active-text: #475569;
+  --color-active-border: #475569;
+  --color-active-icon: #475569;
+  --color-hover-bg: rgba(71, 85, 105, 0.06);
+  --color-focus-ring: rgba(71, 85, 105, 0.4);
+  --logo-filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15)) drop-shadow(0 4px 10px rgba(139, 92, 246, 0.2));
+}
+
+
+/* ===== CORNER RADIUS SYSTEM ===== */
+:root[data-radius="square"] {
+  --radius-sm: 0px; --radius-md: 0px; --radius-lg: 0px; --radius-xl: 0px; --radius-2xl: 0px;
+}
+:root[data-radius="crisp"] {
+  --radius-sm: 2px; --radius-md: 4px; --radius-lg: 4px; --radius-xl: 4px; --radius-2xl: 6px;
+}
+:root[data-radius="soft"] {
+  --radius-sm: 4px; --radius-md: 6px; --radius-lg: 8px; --radius-xl: 8px; --radius-2xl: 10px;
+}
+:root[data-radius="comfortable"] {
+  --radius-sm: 6px; --radius-md: 8px; --radius-lg: 12px; --radius-xl: 12px; --radius-2xl: 16px;
+}
+:root[data-radius="rounded"] {
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-xl: 16px; --radius-2xl: 20px;
+}
+:root[data-radius="modern"] {
+  --radius-sm: 10px; --radius-md: 16px; --radius-lg: 20px; --radius-xl: 20px; --radius-2xl: 24px;
+}
+:root[data-radius="organic"] {
+  --radius-sm: 12px; --radius-md: 20px; --radius-lg: 28px; --radius-xl: 28px; --radius-2xl: 32px;
+}
+:root[data-radius="capsule"] {
+  --radius-sm: 999px; --radius-md: 999px; --radius-lg: 999px; --radius-xl: 999px; --radius-2xl: 999px;
+}
+
+/* ===== PREMIUM CANVAS WALLPAPERS ANIMATIONS ===== */
+
+/* 1. Neutrino Rain */
+/* Calculated entirely in Canvas */
+
+/* 2. Data Storm */
+/* Calculated entirely in Canvas */
+
+/* 3. Pixel Drift */
+/* Calculated entirely in Canvas */
+
+/* 4. Mercury Flow */
+/* Calculated entirely in Canvas + CSS Contrast filter */
