@@ -422,7 +422,7 @@ All theme state is persisted locally so your preferences carry across sessions.
 
 - ✅ AI Chat with streaming responses
 - ✅ Multilingual detection & i18n
-- ✅ Voice / Text-to-Speech pipeline
+- ✅ Text-to-Speech pipeline
 - ✅ Theme Engine (light/dark, dynamic accents, wallpapers)
 - ✅ Analytics Dashboard
 - ✅ Keyboard shortcuts & command palette
